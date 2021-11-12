@@ -25,7 +25,7 @@ function Todo(props) {
       </div>
       {/* if modalOpen is true then show Modal and Backdrop components */}
       {/* {modalOpen ? <Modal/> :null } */}
-      {modalOpen && <Modal />}
+      {modalOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
       {modalOpen && <Backdrop onCancel={closeModalHandler}/>}
 
 
