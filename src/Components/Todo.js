@@ -12,16 +12,21 @@ function Todo(props) {
     setmodalOpen(true);
   }
 
+  function closeModalHandler(){
+    //close modal when clicking on Backdrop
+    setmodalOpen(false)
+  }
+
   return (
     <div className="card">
       <h2>{props.text}</h2>
       <div className="actions">
         <button className="btn" onClick={deleteHandler}>Delete</button>
       </div>
-      //if modalOpen is true then show Modal and Backdrop components
+      {/* if modalOpen is true then show Modal and Backdrop components */}
       {/* {modalOpen ? <Modal/> :null } */}
       {modalOpen && <Modal />}
-      {modalOpen && <Backdrop />}
+      {modalOpen && <Backdrop onCancel={closeModalHandler}/>}
 
 
     </div>
