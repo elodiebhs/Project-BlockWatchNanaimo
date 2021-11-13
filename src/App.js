@@ -3,7 +3,7 @@
 // import Todo from './Components/Todo'
 import { Route, Switch} from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups"
-import NewMeetupPage from "./pages/NewMeetup"
+import AddNewMeetupPage from "./pages/AddNewMeetup"
 import FavoriteMeetupPage from "./pages/FavoriteMeetup"
 import Todo from "./pages/toDo/Todo"
 import Layout from "./Components/layout/Layout"
@@ -19,7 +19,7 @@ function App() {
         </Route>
 
         <Route path="/new-meetup">
-          <NewMeetupPage />
+          <AddNewMeetupPage />
         </Route>
 
         <Route path="/favorites">
