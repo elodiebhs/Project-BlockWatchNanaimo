@@ -6,13 +6,13 @@ import AllMeetupsPage from "./pages/AllMeetups"
 import NewMeetupPage from "./pages/NewMeetup"
 import FavoriteMeetupPage from "./pages/FavoriteMeetup"
 import Todo from "./pages/toDo/Todo"
-import MainNavigation from "./Components/layout/MainNavigation";
+import Layout from "./Components/layout/Layout"
 
 
 function App() {
   return (
     <div >
-      <MainNavigation/>
+      <Layout>
       <Switch>
         <Route path="/" exact={true}>
           <AllMeetupsPage />
@@ -30,7 +30,7 @@ function App() {
           <Todo  text="Exemple"/>
         </Route>
       </Switch>
-      
+      </Layout>
     </div>
   );
 }
