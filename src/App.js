@@ -5,6 +5,7 @@ import { Route, Switch} from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups"
 import NewMeetupPage from "./pages/NewMeetup"
 import FavoriteMeetupPage from "./pages/FavoriteMeetup"
+import Todo from "./pages/toDo/Todo"
 import MainNavigation from "./Components/layout/MainNavigation";
 
 
@@ -15,7 +16,6 @@ function App() {
       <Switch>
         <Route path="/" exact={true}>
           <AllMeetupsPage />
-
         </Route>
 
         <Route path="/new-meetup">
@@ -25,10 +25,12 @@ function App() {
         <Route path="/favorites">
           <FavoriteMeetupPage />
         </Route>
+
+        <Route path="/to-do">
+          <Todo  text="Exemple"/>
+        </Route>
       </Switch>
-      {/* 
-      <h1>My Todos</h1>
-      <Todo text="Learn React" /> */}
+      
     </div>
   );
 }

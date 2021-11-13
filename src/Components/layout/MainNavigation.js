@@ -14,6 +14,7 @@ function MainNavigation() {
           <li><Link to ="/">All Meetups</Link></li>
           <li><Link to ="/new-meetup">Add New Meetup</Link></li>
           <li><Link to ="/favorites">My favorites</Link></li>
+          <li><Link to ="/to-do">To Do List</Link></li>
          
         </ul>
       </nav>

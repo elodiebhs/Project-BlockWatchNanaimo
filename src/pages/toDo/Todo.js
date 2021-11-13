@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import Backdrop from "./Backdrop"
 import Modal from './Modal'
+import classes from './ToDo.module.css';
 
 function Todo(props) {
   //modal component is set on close
@@ -18,10 +19,11 @@ function Todo(props) {
   }
 
   return (
-    <div className="card">
+    <div className={classes.card}>
+      <h1>My Todos</h1>
       <h2>{props.text}</h2>
-      <div className="actions">
-        <button className="btn" onClick={deleteHandler}>Delete</button>
+      <div className={classes.action}>
+        <button className={classes.btn} onClick={deleteHandler}>Delete</button>
       </div>
       {/* if modalOpen is true then show Modal and Backdrop components */}
       {/* {modalOpen ? <Modal/> :null } */}

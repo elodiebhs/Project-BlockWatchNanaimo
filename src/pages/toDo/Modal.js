@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './ToDo.module.css';
 
 function Modal(props) {
 
@@ -10,10 +11,10 @@ function Modal(props) {
     props.onConfirm();
   }
   return (
-    <div className="modal">
+    <div className={classes.modal}>
       <p>Are you sure?</p>
-      <button className="btn btn--alt" onClick={cancelHandler}>Cancel</button>
-      <button className="btn" onClick={confirmHandler}>Confirm</button>
+      <button className={classes.btn} onClick={cancelHandler}>Cancel</button>
+      <button className={classes.btn}  onClick={confirmHandler}>Confirm</button>
     </div>
   )
 }
