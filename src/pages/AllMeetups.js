@@ -1,5 +1,6 @@
-import React from 'react'
+import {React, useState} from 'react'
 import MeetupList from "../Components/meetups/MeetupList"
+
 
 const DUMMY_DATA = [
   {
@@ -22,17 +23,27 @@ const DUMMY_DATA = [
   },
 ];
 function AllMeetupsPage() {
-  return (
-    <div>
-      <h1>All Meetups</h1>
-      {/* <ul>
+  
+  //by default fecth send a get request to get our data
+  fetch('https://blockwatch-88cf6-default-rtdb.firebaseio.com/meetups.json',
+    {}
+  ).then((response) => {
+    return response.json();
+  }).then(date => {
+
+  });
+}
+return (
+  <div>
+    <h1>All Meetups</h1>
+    {/* <ul>
       {DUMMY_DATA.map((meetup)=>{
         return <li key={meetup.id}>{meetup.title}</li>
       })}
       </ul> */}
-      <MeetupList meetups={DUMMY_DATA} />
-    </div>
-  )
+    <MeetupList meetups={DUMMY_DATA} />
+  </div>
+)
 }
 
 export default AllMeetupsPage
