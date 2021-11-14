@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import { React, useState } from 'react'
 import MeetupList from "../Components/meetups/MeetupList"
 
 
@@ -24,7 +24,7 @@ const DUMMY_DATA = [
 ];
 function AllMeetupsPage() {
   //we start in a loading state
-  const[isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   //by default fecth send a get request to get our data
   fetch('https://blockwatch-88cf6-default-rtdb.firebaseio.com/meetups.json',
@@ -36,7 +36,10 @@ function AllMeetupsPage() {
     setIsLoading(false)
   });
 
-  
+    if(isLoading){
+      return <section><p>Loading...</p></section>
+    }
+
 }
 return (
   <div>
