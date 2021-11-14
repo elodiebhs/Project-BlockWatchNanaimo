@@ -23,15 +23,20 @@ const DUMMY_DATA = [
   },
 ];
 function AllMeetupsPage() {
-  
+  //we start in a loading state
+  const[isLoading, setIsLoading] = useState(true)
+
   //by default fecth send a get request to get our data
   fetch('https://blockwatch-88cf6-default-rtdb.firebaseio.com/meetups.json',
     {}
   ).then((response) => {
     return response.json();
   }).then(date => {
-
+    //we set lading to false when we have data
+    setIsLoading(false)
   });
+
+  
 }
 return (
   <div>
